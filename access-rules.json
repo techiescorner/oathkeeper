@@ -6,7 +6,7 @@
       "url": "https://httpbin.org/anything/header"
     },
     "match": {
-      "url": "http://<oathkeeper-proxy.com>:4455/anything/header",
+      "url": "http://oathkeeper-proxy.com/anything/header",
       "methods": [
         "GET"
       ]
