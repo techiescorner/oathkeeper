@@ -6,7 +6,7 @@
       "url": "https://httpbin.org/anything/header"
     },
     "match": {
-      "url": "http://http://<[^/]+>/anything/header",
+      "url": "http://<[^/]+>/anything/header",
       "methods": [
         "GET"
       ]
