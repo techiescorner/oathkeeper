@@ -1,6 +1,6 @@
 [
   {
-    "id": "allow-anonymous-with-header-mutator",
+    "id": "allow-anonymous",
     "version": "v0.36.0-beta.4",
     "upstream": {
       "url": "https://httpbin.org/anything/header"
