@@ -1,32 +1,27 @@
-[
-  {
-    "id": "rule-1",
-    "version": "v0.36.0-beta.4",
-    "upstream": {
-      "url": "https://httpbin.org/anything/header"
-    },
-    "match": {
-      "url": "http://<[^/]+>/anything/header",
-      "methods": [
-        "GET"
-      ]
-    },
-    "authenticators": [
-      {
-        "handler": "anonymous"
-      }
-    ],
-    "authorizer": {
-      "handler": "allow"
-    },
-    "mutators": [
-      {
-        "handler": "header",
-        "config": {
-          "headers": {
-            "X-User": "{{ print .Subject }}"
-          }
-        }
-      }
-    ]
-  }]
+[{
+	"id": "rule-1",
+	"version": "v0.38.19-beta.1",
+	"description": "",
+	"match": {
+		"methods": ["GET", "POST", "PUT", "DELETE", "PATCH"],
+		"url": "http://\u003c[^/]+\u003e/authenticator/noop/authorizer/allow/mutator/noop"
+	},
+	"authenticators": [{
+		"handler": "noop",
+		"config": null
+	}],
+	"authorizer": {
+		"handler": "deny",
+		"config": null
+	},
+	"mutators": [{
+		"handler": "noop",
+		"config": null
+	}],
+	"errors": null,
+	"upstream": {
+		"preserve_host": false,
+		"strip_path": "",
+		"url": "https://httpbin.org/anything"
+	}
+}]
